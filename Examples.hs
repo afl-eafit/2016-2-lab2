@@ -41,7 +41,7 @@ m1 = ENFA (fromList [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
       deltaM 8  'e' = singleton 10
       deltaM 9  'e' = singleton 10
       deltaM 10 'e' = fromList [3, 11]
-      delta  _  _  = empty
+      deltaM  _  _  = empty
 
 --The regular expression s yields an e-nfa like this using 2nd
 --simplifcation
@@ -63,7 +63,7 @@ m2 = ENFA (fromList [0, 1, 2, 3, 4, 5, 6, 7, 8])
       deltaM 6 'e' = singleton 7
       deltaM 7 'e' = singleton 1
       deltaM 7 '1' = singleton 8
-      delta  _  _  = empty
+      deltaM  _  _  = empty
 
 --The regular expression s yields an e-nfa like this using 3rd
 --simplifcation
@@ -84,4 +84,4 @@ m3 = ENFA (fromList [0, 1, 2, 3, 4, 5, 6, 7, 8])
       deltaM 5 'e' = singleton 6
       deltaM 6 'e' = singleton 7
       deltaM 7 '1' = singleton 8
-      delta  _  _  = empty
+      deltaM  _  _  = empty
