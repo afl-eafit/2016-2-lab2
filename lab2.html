@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Regular expressions and &#949;-NFA simplification</title>
+  </head>
+
+<body>
+  <div style="text-align: center;">
+    <h1>Programming lab 2: Regular expressions and &#949;-NFA simplification</h1>
+
+    <p><b>Submission deadline: TBA</b></p>
+  </div>
+
+  <h3>TA: Alejandro Calle-Saldarriaga</h3>
+
+
+  <h3>Introduction</h3>
+
+  <div style="text-align: left;">
+    <p><b> Exercise 3.2.8. </b> There are some simplifications to the constructions of Theorem 3.7, where we converted a regular expression to an &#949;-NFA. Here are three:</p>
+   <p> 1. For the union operator, instead of creating a new start and accepting states, merge the two start states into one state with all the transitions of both start states. Likewise, merge the two accepting, having all transitions to either go to the merged state instead. </p>
+<p> 2. For the concatenation operator, merge the accepting state of the first automaton with the start state of the second.</p>
+<p> 3. For the closure operator, simply add &#949;-transitions from the accepting state to the start state and vice-versa. </p>
+  </div>
+
+  <h3>Assignment (80%)</h3>
+
+  <ul style="text-align: left;">
+    <li>Download the <a href="https://github.com/">GitHub</a> repository
+    <a href=
+    "https://github.com/afl-eafit/2016-2-lab2">2016-2-lab2</a>.
+
+      <ul>
+        <li>The module <code>RegEx</code> implements a Regular Expression.
+        </li>
+
+        <li>The module <code>ENFA</code> implements an &#949;-NFA.
+        </li>
+        
+        <li>The module <code>Examples</code> implements examples for both of these data types.
+        </li>
+      </ul>
+    </li>
+
+    <li>(70%) Using the modules <code>RegEx</code> and <code>eNFA</code>, define the
+    functions
+      <pre>
+          const1 :: RegEx a -&gt; ENFA state symbol 
+          const2 :: RegEx a -&gt; ENFA state symbol 
+          const3 :: RegEx a -&gt; ENFA state symbol
+</pre>that takes a regular expression and constructs the &#949;-NFA described in Theorem 3.7 but with the each of the simplifications described in Exercise 3.2.8.
+
+
+    </li>
+
+    <li>(10%) Annotate your source code using Haddock. Documentation
+    should explain your solution for the assignment. Improve it
+    with <a href="https://github.com/ndmitchell/hlint">HLint</a>.</li>
+  </ul>
+
+  <h3>Clean code (10%)</h3>
+
+  <div style="text-align: left;">
+    <p>Before submitting your code, clean it up! Clean code:</p>
+    <ul>
+      <li>Does not have long lines (at most 80 columns).</li>
+
+      <li>Has a consistent layout.</li>
+
+      <li>Has type signatures for everything (<tt>included</tt> where
+      and <tt>let</tt> definitions).</li>
+
+      <li>Has good comments.</li>
+
+      <li>Has no junk (unused code, commented code, unnecessary code).</li>
+
+      <li>Has no overly complicated function definitions.</li>
+
+      <li>Does not contain any repetitive code.</li>
+
+      <li>Has no tabs.</li>
+
+      <li> Has no unnecessary spaces at the end of a line, or empty lines at
+        the end of a file. (See:
+        <a href="http://www1.eafit.edu.co/asr/tips-and-tricks.html#fixing-trailing-whitespace-issues">
+          Fixing trailing whitespace issues with Emacs
+        </a>).
+      </li>
+
+      <li>Has spell-checked comments.</li>
+    </ul>
+  </div>
+
+  <h3>Submission (10%)</h3>
+
+  <div style="text-align: left;">
+    <p>Submission is electronic. Send an email to
+    <tt>asr(at)eafit(dot)edu(dot)co</tt> and
+    <tt>acalles(at)eafit(dot)edu(dot)co</tt> and attach a compressed file
+    (.zip or .tar.gz) with your solution.</p>
+
+    <p>Your submission has to include the following:</p>
+
+    <ul>
+      <li><tt>consENFA.hs</tt>, a Haskell module file with your solution for
+      the assignment.</li>
+
+      <li>
+        <tt>README</tt> (or <tt>README.md</tt>), a file containing at least
+        the following information.
+
+        <ul>
+          <li>The name of your program.</li>
+
+
+          <li>Your name(s).</li>
+
+          <li>A general description of your program.</li>
+
+          <li>Information on how to use your program.</li>
+
+          <li>GHC and Haskell platform versions used</li>
+        </ul>
+      </li>
+      <li>Do not include any other files.</li>
+    </ul>
+  </div>
+
+  <h3>Notes</h3>
+
+  <ul style="text-align: left;">
+    <li>The programming lab may either be solved on your own, or jointly with
+    one other student taking the course.</li>
+
+    <li>You are to use the Haskell Platform 2014.2.0.0 or GHCi ≥ 7.8.3.</li>
+
+    <li>You can add class constraints to the type signature of
+    <code>accepts</code> if you need them.</li>
+  </ul>
+
+  <h3>Bibliography</h3>
+
+<ul style="text-align: justify;">
+  <li>John E. Hopcrof, Rajeev Motwani and Jeffrey D. Ullman (2001).
+    <em>Introduction to Automata Theory, Languages, and Computation</em>.</li>
+
+</ul>
+
+  <hr/>
+
+  <table style="width:100%">
+    <tr>
+      <td><a href=
+             "http://www1.eafit.edu.co/asr/courses/automata-CM0081/">Automata
+      and formal languages - CM0081</a></td>
+
+      <td style="text-align:right;"><a
+        href="http://validator.w3.org/check?uri=referer"><img
+        src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML
+        1.1" height="31" width="88" /></a></td>
+    </tr>
+  </table>
+
+</body>
+</html>
