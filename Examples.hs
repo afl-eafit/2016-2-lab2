@@ -49,14 +49,13 @@ m2 = ENFA (fromList [0, 1, 2, 3, 4, 5, 6, 7, 8])
         (singleton 8)
     where
       deltaM :: Int -> Char -> Set Int
-      deltaM 0 'e' = singleton 1
-      deltaM 1 'e' = fromList [2,3,7]
-      deltaM 2 '0' = singleton 5
-      deltaM 3 '1' = singleton 4
+      deltaM 0 'e' = fromList [1, 7]
+      deltaM 1 'e' = fromList [2, 3]
+      deltaM 2 '0' = singleton 3
+      deltaM 3 '1' = singleton 5
       deltaM 4 'e' = singleton 6
       deltaM 5 'e' = singleton 6
-      deltaM 6 'e' = singleton 7
-      deltaM 7 'e' = singleton 1
+      deltaM 6 'e' = fromList [1, 7]
       deltaM 7 '1' = singleton 8
       deltaM _  _  = empty
 
@@ -68,14 +67,14 @@ m3 = ENFA (fromList [0, 1, 2, 3, 4, 5, 6, 7])
         (fromList ['0','1','e'])
         deltaM
         (0)
-        (singleton 8)
+        (singleton 7)
     where
       deltaM :: Int -> Char -> Set Int
-      deltaM 0 'e' = fromList [1, 2, 7]
-      deltaM 1 '1' = singleton 1
-      deltaM 2 'e' = singleton 5
-      deltaM 3 '0' = singleton 4
+      deltaM 0 'e' = fromList [1, 2, 5]
+      deltaM 1 '1' = singleton 3
+      deltaM 2 '0' = singleton 4
+      deltaM 3 'e' = singleton 5
       deltaM 4 'e' = singleton 5
       deltaM 5 'e' = fromList [0, 6]
       deltaM 6 '1' = singleton 7
-      deltaM  _  _  = empty
+      deltaM _ _ = empty
