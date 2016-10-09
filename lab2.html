@@ -65,11 +65,11 @@
     <li>(70%) Using the modules <code>RegEx</code> and
     <code>ENFA</code>, define the functions
       <pre>
-        const1 :: RegExp a -&gt; ENFA state symbol
+        const1 :: RegExp symbol -&gt; ENFA state symbol
 
-        const2 :: RegExp a -&gt; ENFA state symbol
+        const2 :: RegExp symbol -&gt; ENFA state symbol
 
-        const3 :: RegExp a -&gt; ENFA state symbol
+        const3 :: RegExp symbol -&gt; ENFA state symbol
       </pre>
       that takes a regular expression and constructs the &#949;-NFA
       described in Theorem 3.7 but with the each of the
