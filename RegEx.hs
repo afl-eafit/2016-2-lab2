@@ -4,9 +4,9 @@
 module RegEx where
 
 -- A polymorphic data regular expression data type
-data RegExp a = Empty
-              | Epsilon
-              | Symbol a
-              | Star (RegExp a)
-              | Plus (RegExp a) (RegExp a)
-              | Dot  (RegExp a) (RegExp a)
+data RegExp  = Empty
+             | Epsilon
+             | Symbol Char
+             | Star RegExp
+             | Plus RegExp RegExp
+             | Dot  RegExp RegExp

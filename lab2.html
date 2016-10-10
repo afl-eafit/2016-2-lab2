@@ -54,7 +54,7 @@
         <li>The module <code>RegEx</code> defines a data type for
         regular expression.</li>
 
-        <li>The module <code>ENFA</code> define a data type for
+        <li>The module <code>ENFA</code> defines a data type for
         &#949;-NFAs.</li>
 
         <li>The module <code>Examples</code> implements examples for
@@ -65,15 +65,15 @@
     <li>(70%) Using the modules <code>RegEx</code> and
     <code>ENFA</code>, define the functions
       <pre>
-        const1 :: RegExp symbol -&gt; ENFA state symbol
+        const1 :: RegExp -&gt; ENFA
 
-        const2 :: RegExp symbol -&gt; ENFA state symbol
+        const2 :: RegExp -&gt; ENFA
 
-        const3 :: RegExp symbol -&gt; ENFA state symbol
+        const3 :: RegExp -&gt; ENFA
       </pre>
       that takes a regular expression and constructs the &#949;-NFA
       described in Theorem 3.7 but with the each of the
-      simplifications described in Exercise 3.2.8.
+      simplifications described in Exercise 3.2.8.
     </li>
 
     <li>(10%)
@@ -164,9 +164,6 @@
 
     <li>You are to use the Haskell Platform ≥ 8.0.1 or GHC[i] ≥
     8.01</li>
-
-    <li>You can add class constraints to the type signature of
-    <code>const1</code>, <code>const2</code> and <code>const3</code>  if you need them.</li>
   </ul>
 
   <h3>Bibliography</h3>
