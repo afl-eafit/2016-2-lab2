@@ -22,32 +22,30 @@
 
   <h3>Introduction</h3>
 
-  <div style="text-align: left;">
-    <p><b>Exercise 3.2.7</b> [Hopcroft, Motwani and Ullman 2007] There
-    are some simplifications to the constructions of Theorem 3.7,
-    where we converted a regular expression to an &#949;-NFA. Here are
-    three:</p>
+  <p><b>Exercise 3.2.7</b> [Hopcroft, Motwani and Ullman 2007] There
+  are some simplifications to the constructions of Theorem 3.7, where
+  we converted a regular expression to an &#949;-NFA. Here are
+  three:</p>
 
-    <ol>
-      <li>For the union operator, instead of creating a new start and
-      accepting states, merge the two start states into one state with
-      all the transitions of both start states. Likewise, merge the
-      two accepting, having all transitions to either go to the merged
-      state instead.</li>
+  <ol>
+    <li>For the union operator, instead of creating a new start and
+    accepting states, merge the two start states into one state with
+    all the transitions of both start states. Likewise, merge the two
+    accepting, having all transitions to either go to the merged state
+    instead.</li>
 
-      <li>For the concatenation operator, merge the accepting state of
-      the first automaton with the start state of the second.</li>
+    <li>For the concatenation operator, merge the accepting state of
+    the first automaton with the start state of the second.</li>
 
-      <li>For the closure operator, simply add &#949;-transitions from
-      the accepting state to the start state and vice-versa.</li>
-    </ol>
-  </div>
+    <li>For the closure operator, simply add &#949;-transitions from
+    the accepting state to the start state and vice-versa.</li>
+  </ol>
 
   <h3>Assignment (80%)</h3>
 
-  <ul style="text-align: left;">
-    <li>Download the <a href="https://github.com/">GitHub</a> repository
-    <a href=
+  <ul>
+    <li>Download the <a href="https://github.com/">GitHub</a>
+    repository <a href=
     "https://github.com/afl-eafit/2016-2-lab2">2016-2-lab2</a>.
 
       <ul>
@@ -87,82 +85,75 @@
 
   <h3>Examples</h3>
 
-  <div style="text-align: left;">
-    <p>See the <code>Examples.hs</code> module in above GitHub
-    repository.</p>
-  </div>
+  <p>See the <code>Examples.hs</code> module in above GitHub
+  repository.</p>
 
   <h3>Clean code (10%)</h3>
 
-  <div style="text-align: left;">
-    <p>Before submitting your code, clean it up! Clean code:</p>
-    <ul>
-      <li>Does not have long lines (at most 80 columns).</li>
+  <p>Before submitting your code, clean it up! Clean code:</p>
+  <ul>
+    <li>Does not have long lines (at most 80 columns).</li>
 
-      <li>Has a consistent layout.</li>
+    <li>Has a consistent layout.</li>
 
-      <li>Has type signatures for everything (<tt>included</tt> where
-      and <tt>let</tt> definitions).</li>
+    <li>Has type signatures for everything (<tt>included</tt> where
+    and <tt>let</tt> definitions).</li>
 
-      <li>Has good comments.</li>
+    <li>Has good comments.</li>
 
-      <li>Has no junk (unused code, commented code, unnecessary code).</li>
+    <li>Has no junk (unused code, commented code, unnecessary code).</li>
 
-      <li>Has no overly complicated function definitions.</li>
+    <li>Has no overly complicated function definitions.</li>
 
-      <li>Does not contain any repetitive code.</li>
+    <li>Does not contain any repetitive code.</li>
 
-      <li>Has no tabs.</li>
+    <li>Has no tabs.</li>
 
-      <li>Has no unnecessary spaces at the end of a line, or empty
-      lines at the end of a file. (See:
+    <li>Has no unnecessary spaces at the end of a line, or empty lines
+    at the end of a file. (See:
         <a href="http://www1.eafit.edu.co/asr/tips-and-tricks.html#fixing-trailing-whitespace-issues">
-          Fixing trailing whitespace issues with Emacs
-        </a>).
-      </li>
+          Fixing trailing whitespace issues with Emacs </a>).
+    </li>
 
-      <li>Has spell-checked comments.</li>
-    </ul>
-  </div>
+    <li>Has spell-checked comments.</li>
+  </ul>
 
   <h3>Submission (10%)</h3>
 
-  <div style="text-align: left;">
-    <p>Submission is electronic. Send an email to
-    <tt>asr(at)eafit(dot)edu(dot)co</tt> and
-    <tt>acalles(at)eafit(dot)edu(dot)co</tt> and attach a compressed file
-    (.zip or .tar.gz) with your solution.</p>
+  <p>Submission is electronic. Send an email to
+  <tt>asr(at)eafit(dot)edu(dot)co</tt> and
+  <tt>acalles(at)eafit(dot)edu(dot)co</tt> and attach a compressed
+  file (.zip or .tar.gz) with your solution.</p>
 
-    <p>Your submission has to include the following:</p>
+  <p>Your submission has to include the following:</p>
 
-    <ul>
-      <li><tt>ConsENFA.hs</tt>, a Haskell module file with your solution for
-      the assignment.</li>
+  <ul>
+    <li><tt>ConsENFA.hs</tt>, a Haskell module file with your solution
+    for the assignment.</li>
 
-      <li>
-        <tt>README</tt> (or <tt>README.md</tt>), a file containing at least
-        the following information.
+    <li>
+      <tt>README</tt> (or <tt>README.md</tt>), a file containing at
+      least the following information.
 
-        <ul>
-          <li>The name of your program.</li>
+      <ul>
+        <li>The name of your program.</li>
 
+        <li>Your name(s).</li>
 
-          <li>Your name(s).</li>
+        <li>A general description of your program.</li>
 
-          <li>A general description of your program.</li>
+        <li>Information on how to use your program.</li>
 
-          <li>Information on how to use your program.</li>
+        <li>GHC and Haskell platform versions used</li>
+      </ul>
+    </li>
 
-          <li>GHC and Haskell platform versions used</li>
-        </ul>
-      </li>
-      <li>Do not include any other files.</li>
-    </ul>
-  </div>
+    <li>Do not include any other files.</li>
+  </ul>
 
   <h3>Notes</h3>
 
-  <ul style="text-align: left;">
+  <ul>
     <li>The programming lab may either be solved on your own, or jointly with
     one other student taking the course.</li>
 
@@ -172,11 +163,9 @@
 
   <h3>Bibliography</h3>
 
-  <ul style="text-align: justify;">
-    <li>John E. Hopcroft, Rajeev Motwani, and Jeffrey D. Ullman
-    (2007). Introduction to Automata Theory, Languages, and
-    Computation. 3rd ed. Addison-Wesley.</li>
-  </ul>
+  <p>John E. Hopcroft, Rajeev Motwani, and Jeffrey D. Ullman
+  (2007). Introduction to Automata Theory, Languages, and
+  Computation. 3rd ed. Addison-Wesley.</p>
 
   <hr/>
 
